@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.data.BarEntry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.data.PieEntry;
@@ -33,7 +32,7 @@ public class ChartPieFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_create_game, container, false);
+        view = inflater.inflate(R.layout.fragment_pie_chart, container, false);
         PieChart pieChart = view.findViewById(R.id.pieChart);
         SQLiteHelper sqLiteHelper = new SQLiteHelper(getContext());
         List<Book> bookList = sqLiteHelper.getAllBookRecord();
